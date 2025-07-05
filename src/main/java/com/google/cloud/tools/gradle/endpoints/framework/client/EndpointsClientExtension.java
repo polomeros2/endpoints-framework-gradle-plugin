@@ -28,7 +28,7 @@ public class EndpointsClientExtension {
   private final File clientLibDir;
   private final File genDiscoveryDocsDir;
   private final Project project;
-  private List<File> discoveryDocs;
+  private final List<File> discoveryDocs;
 
   /** Constructor. */
   public EndpointsClientExtension(Project project) {

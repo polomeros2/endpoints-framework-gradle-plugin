@@ -40,9 +40,9 @@ sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 dependencies {
-  compile "com.google.endpoints:endpoints-framework:2.0.9" // use latest
-  compile 'javax.servlet:servlet-api:2.5'
-  compile 'javax.inject:javax.inject:1'
+  implementation "com.google.endpoints:endpoints-framework:2.2.2" // use latest
+  implementation 'javax.servlet:servlet-api:2.5'
+  implementation 'javax.inject:javax.inject:1'
 }
 
 /*endpoints-plugin-hostname*/

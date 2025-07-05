@@ -205,6 +205,7 @@ public class EndpointsArtifactTask extends DefaultTask {
     }
     params.addAll(serviceClasses);
 
-    new EndpointsTool().execute(params.toArray(new String[params.size()]));
+
+    new EndpointsTool().execute(params.toArray(new String[0]));
   }
 }

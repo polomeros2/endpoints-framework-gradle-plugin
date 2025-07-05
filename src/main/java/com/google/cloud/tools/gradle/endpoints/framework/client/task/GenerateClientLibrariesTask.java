@@ -25,6 +25,8 @@ import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.InputDirectory;
 import org.gradle.api.tasks.InputFiles;
@@ -104,7 +106,7 @@ public class GenerateClientLibrariesTask extends DefaultTask {
                 clientLibraryDir.getAbsolutePath()));
 
     params.add(discoveryDoc.getAbsolutePath());
-    new EndpointsTool().execute(params.toArray(new String[params.size()]));
+    new EndpointsTool().execute(params.toArray(new String[0]));
   }
 
   private static List<File> findDiscoveryDocsInDirectory(File discoveryDocDirectory) {
@@ -118,6 +120,6 @@ public class GenerateClientLibrariesTask extends DefaultTask {
                 return pathname.getName().endsWith(".discovery");
               }
             });
-    return Arrays.asList(discoveryDocs);
+    return Arrays.asList(Objects.requireNonNull(discoveryDocs));
   }
 }

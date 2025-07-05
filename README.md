@@ -113,8 +113,8 @@ endpoints client
 
 ```Groovy
 dependencies {
-  compile 'com.google.api-client:google-api-client:<version>' // for standard java projects
-  compile 'com.google.api-client:google-api-client-android:<version>' exclude module: 'httpclient' // for android projects
+    implementation 'com.google.api-client:google-api-client:<version>' // for standard java projects
+    implementation 'com.google.api-client:google-api-client-android:<version>' exclude module: 'httpclient' // for android projects
 }
 ```
 
