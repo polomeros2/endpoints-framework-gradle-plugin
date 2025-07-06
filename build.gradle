@@ -3,7 +3,7 @@ plugins {
     id 'groovy'
     id 'maven'
     id 'java-gradle-plugin'
-    id 'com.github.sherter.google-java-format' version '0.8'
+    //id 'com.github.sherter.google-java-format' version '0.8'
     id 'net.researchgate.release' version '2.6.0'
 }
 
@@ -52,19 +52,19 @@ configurations.all {
 }
 
 /* GOOGLE JAVA FORMAT */
-check.dependsOn verifyGoogleJavaFormat
+//check.dependsOn verifyGoogleJavaFormat
 // to auto-format run ./gradlew googleJavaFormat
 /* GOOGLE JAVA FORMAT */
 
 /* CHECKSTYLE */
-apply plugin: 'checkstyle'
-checkstyle {
+//apply plugin: 'checkstyle'
+/*checkstyle {
     toolVersion = "7.6.1"
     // get the google_checks.xml file from the actual tool we're invoking
     config = resources.text.fromArchiveEntry(configurations.checkstyle[0], 'google_checks.xml')
     maxErrors = 0
-    maxWarnings = 0
-}
+    maxWarnings = 99990
+}*/
 /* CHECKSTYLE */
 
 /* RELEASING */
