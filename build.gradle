@@ -77,7 +77,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     from javadoc.destinationDir
     classifier = 'javadoc'
 }
-/*
+
 task writePom {
     project.afterEvaluate {
         def outputFile = file("$buildDir/pom/${project.name}-${project.version}.pom")
@@ -118,9 +118,9 @@ task writePom {
             }.writeTo(outputFile)
         }
     }
-}*/
+}
 
-tasks.register('prepareRelease', Copy) {
+task prepareRelease(type: Copy) {
     from jar
     from sourceJar
     from javadocJar
@@ -133,10 +133,10 @@ tasks.register('prepareRelease', Copy) {
 }
 
 // Release helper (git release commits and version updates)
-/*release {
+release {
     tagTemplate = 'v$version'
     git {
         //requireBranch = /^release_v\d+.*$/  //regex
     }
-}*/
+}
 /* RELEASING */
