@@ -120,7 +120,7 @@ task writePom {
     }
 }
 
-task prepareRelease(type: Copy) {
+tasks.register('prepareRelease', Copy) {
     from jar
     from sourceJar
     from javadocJar
